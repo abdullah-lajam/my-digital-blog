@@ -21,6 +21,7 @@ gem "concurrent-ruby", "~> 1.1.1"
 # Add missing dependencies for Netlify build
 gem "logger"
 gem "base64"
+gem "bigdecimal"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
