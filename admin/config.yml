@@ -16,7 +16,7 @@ collections:
       - {label: "العنوان", name: "title", widget: "string"}
       - {label: "تاريخ النشر", name: "date", widget: "datetime"}
       - {label: "الصورة البارزة", name: "image", widget: "image", required: false}
-      - {label: "المحتوى", name: "body", widget: "markdown"}
+      - {label: "المحتوى", name: "body", widget: "html"}
       - {label: "التصنيفات", name: "tags", widget: "list", required: false}
 
   - name: "elearning"
@@ -29,7 +29,7 @@ collections:
       - {label: "العنوان", name: "title", widget: "string"}
       - {label: "تاريخ النشر", name: "date", widget: "datetime"}
       - {label: "الصورة البارزة", name: "image", widget: "image", required: false}
-      - {label: "المحتوى", name: "body", widget: "markdown"}
+      - {label: "المحتوى", name: "body", widget: "html"}
       - {label: "التصنيفات", name: "tags", widget: "list", required: false}
 
   - name: "business"
@@ -42,7 +42,7 @@ collections:
       - {label: "العنوان", name: "title", widget: "string"}
       - {label: "تاريخ النشر", name: "date", widget: "datetime"}
       - {label: "الصورة البارزة", name: "image", widget: "image", required: false}
-      - {label: "المحتوى", name: "body", widget: "markdown"}
+      - {label: "المحتوى", name: "body", widget: "html"}
       - {label: "التصنيفات", name: "tags", widget: "list", required: false}
 
   - name: "humanities"
@@ -55,7 +55,7 @@ collections:
       - {label: "العنوان", name: "title", widget: "string"}
       - {label: "تاريخ النشر", name: "date", widget: "datetime"}
       - {label: "الصورة البارزة", name: "image", widget: "image", required: false}
-      - {label: "المحتوى", name: "body", widget: "markdown"}
+      - {label: "المحتوى", name: "body", widget: "html"}
       - {label: "التصنيفات", name: "tags", widget: "list", required: false}
 
   - name: "misc"
@@ -68,7 +68,7 @@ collections:
       - {label: "العنوان", name: "title", widget: "string"}
       - {label: "تاريخ النشر", name: "date", widget: "datetime"}
       - {label: "الصورة البارزة", name: "image", widget: "image", required: false}
-      - {label: "المحتوى", name: "body", widget: "markdown"}
+      - {label: "المحتوى", name: "body", widget: "html"}
       - {label: "التصنيفات", name: "tags", widget: "list", required: false}
 
   - name: "pages"
@@ -81,5 +81,5 @@ collections:
           - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
           - {label: "العنوان", name: "title", widget: "string"}
           - {label: "الرابط الدائم", name: "permalink", widget: "string"}
-          - {label: "المحتوى", name: "body", widget: "markdown"}
+          - {label: "المحتوى", name: "body", widget: "html"}
 
