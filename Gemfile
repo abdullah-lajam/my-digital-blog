@@ -23,6 +23,7 @@ gem "concurrent-ruby", "~> 1.1.1"
 gem "logger"
 gem "base64"
 gem "bigdecimal"
+gem "public_suffix", "~> 4.0"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
