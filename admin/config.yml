@@ -1,9 +1,6 @@
 backend:
-  name: github
-  repo: abdullah-lajam/my-digital-blog # Updated with user's repo
-  branch: master
-  client_id: Ov23linH8mC7YEVdCfJz # Updated with user's Client ID
-  # site_domain: 4000-i7zp1rxhhngb1inorip5m-f7f16f53.manusvm.computer # Temporary domain for local testing with OAuth
+  name: git-gateway
+  branch: main # Using main as the primary branch
 
 media_folder: "assets/uploads" # Folder where user uploaded files should go
 publish_mode: editorial_workflow # Enable editorial workflow
