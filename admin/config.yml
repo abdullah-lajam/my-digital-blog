@@ -1,20 +1,88 @@
 backend:
-  name: git-gateway
-  branch: master # Branch to update (master by default)
+  name: github
+  repo: abdullah-lajam/my-digital-blog # Updated with user's repo
+  branch: master
+  client_id: Ov23linH8mC7YEVdCfJz # Updated with user's Client ID
+  # site_domain: 4000-i7zp1rxhhngb1inorip5m-f7f16f53.manusvm.computer # Temporary domain for local testing with OAuth
 
-media_folder: "img/uploads" # Folder where user uploaded files should go
+media_folder: "assets/uploads" # Folder where user uploaded files should go
+publish_mode: editorial_workflow # Enable editorial workflow
 
-collections: # A list of collections the CMS should be able to edit
-  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Post" # Used in the UI, ie.: "New Post"
-    folder: "_posts" # The path to the folder where the documents are stored
-    sort: "date:desc" # Default is title:asc
-    create: true # Allow users to create new documents in this collection
+collections:
+  - name: "ai"
+    label: "الذكاء الاصطناعي"
+    folder: "_ai"
+    create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields: # The fields each document in this collection have
+    fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Categories", name: "categories", widget: "string", required: false}
-    meta: # Meta data fields. Just like fields, but without any preview element
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+      - {label: "العنوان", name: "title", widget: "string"}
+      - {label: "تاريخ النشر", name: "date", widget: "datetime"}
+      - {label: "الصورة البارزة", name: "image", widget: "image", required: false}
+      - {label: "المحتوى", name: "body", widget: "markdown"}
+      - {label: "التصنيفات", name: "tags", widget: "list", required: false}
+
+  - name: "elearning"
+    label: "التعليم الإلكتروني"
+    folder: "_elearning"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "العنوان", name: "title", widget: "string"}
+      - {label: "تاريخ النشر", name: "date", widget: "datetime"}
+      - {label: "الصورة البارزة", name: "image", widget: "image", required: false}
+      - {label: "المحتوى", name: "body", widget: "markdown"}
+      - {label: "التصنيفات", name: "tags", widget: "list", required: false}
+
+  - name: "business"
+    label: "إدارة الأعمال"
+    folder: "_business"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "العنوان", name: "title", widget: "string"}
+      - {label: "تاريخ النشر", name: "date", widget: "datetime"}
+      - {label: "الصورة البارزة", name: "image", widget: "image", required: false}
+      - {label: "المحتوى", name: "body", widget: "markdown"}
+      - {label: "التصنيفات", name: "tags", widget: "list", required: false}
+
+  - name: "humanities"
+    label: "إنسانيات"
+    folder: "_humanities"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "العنوان", name: "title", widget: "string"}
+      - {label: "تاريخ النشر", name: "date", widget: "datetime"}
+      - {label: "الصورة البارزة", name: "image", widget: "image", required: false}
+      - {label: "المحتوى", name: "body", widget: "markdown"}
+      - {label: "التصنيفات", name: "tags", widget: "list", required: false}
+
+  - name: "misc"
+    label: "تدوينات متفرقة"
+    folder: "_misc"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "العنوان", name: "title", widget: "string"}
+      - {label: "تاريخ النشر", name: "date", widget: "datetime"}
+      - {label: "الصورة البارزة", name: "image", widget: "image", required: false}
+      - {label: "المحتوى", name: "body", widget: "markdown"}
+      - {label: "التصنيفات", name: "tags", widget: "list", required: false}
+
+  - name: "pages"
+    label: "الصفحات"
+    files:
+      - file: "aboutme.md"
+        label: "عني"
+        name: "about"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "العنوان", name: "title", widget: "string"}
+          - {label: "الرابط الدائم", name: "permalink", widget: "string"}
+          - {label: "المحتوى", name: "body", widget: "markdown"}
+

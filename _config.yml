@@ -13,11 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Jekyll Netlify CMS
+title: مدونتي الرقمية
 email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  This is the basic Jekyll starter site, with Netlify CMS integrated and using
-  Netlify Identity for authentication.
+description: >-
+  مدونة شخصية تهتم بمواضيع الذكاء الاصطناعي، التعليم الإلكتروني، إدارة الأعمال، الإنسانيات، ومواضيع متنوعة أخرى.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -25,21 +24,40 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 theme: minima
 
 # minima theme settings
-show_excerpts: false # set to true to show excerpts on the homepage
+show_excerpts: true # set to true to show excerpts on the homepage
 
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 minima:
-  date_format: "%b %-d, %Y"
+  date_format: "%Y-%m-%d"
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.html
+header_pages:
+  - aboutme.md
+  # Add other main pages if needed, like a contact page
+
+# Collections for blog sections
+collections:
+  ai:
+    output: true
+    permalink: /:collection/:name
+  elearning:
+    output: true
+    permalink: /:collection/:name
+  business:
+    output: true
+    permalink: /:collection/:name
+  humanities:
+    output: true
+    permalink: /:collection/:name
+  misc:
+    output: true
+    permalink: /:collection/:name
 
 # social links
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: your_twitter_username # استبدل باسم مستخدم تويتر الخاص بك
+github_username:  your_github_username # استبدل باسم مستخدم جيت هاب الخاص بك
 rss: rss
 # dribbble_username: jekyll
 # facebook_username: jekyll
@@ -61,11 +79,13 @@ rss: rss
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
