@@ -21,8 +21,8 @@ baseurl: "" # the subpath of your site, e.g. /blog. Important: leave empty for N
 url: "" # the base hostname & protocol for your site, e.g. http://example.com. Will be set by Netlify.
 
 # Build settings
-# theme: minima # Replaced with Minimal Mistakes
-remote_theme: "mmistakes/minimal-mistakes@4.24.0" # Using a specific version for stability
+theme: minimal-mistakes-jekyll # Using gem-based theme
+# remote_theme: "mmistakes/minimal-mistakes@4.24.0" # Commented out to switch to gem-based theme
 minimal_mistakes_skin: "default" # Optional: "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Locale settings
