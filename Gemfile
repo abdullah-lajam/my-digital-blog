@@ -18,6 +18,10 @@ gem "jekyll", "~> 3.8"
 gem "minima", "~> 2.5"
 gem "concurrent-ruby", "~> 1.1.1"
 
+# Add missing dependencies for Netlify build
+gem "logger"
+gem "base64"
+
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.11"
@@ -33,3 +37,4 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
 
 gem "kramdown-parser-gfm", "~> 1.1"
+

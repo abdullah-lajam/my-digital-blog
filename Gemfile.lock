@@ -3,6 +3,7 @@ GEM
   specs:
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
+    base64 (0.2.0)
     colorator (1.1.0)
     concurrent-ruby (1.1.10)
     csv (3.3.4)
@@ -48,6 +49,7 @@ GEM
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    logger (1.7.0)
     mercenary (0.3.6)
     minima (2.5.2)
       jekyll (>= 3.5, < 5.0)
@@ -73,12 +75,14 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  base64
   concurrent-ruby (~> 1.1.1)
   jekyll (~> 3.8)
   jekyll-feed (~> 0.11)
   jekyll-seo-tag (~> 2.5)
   jekyll-sitemap (~> 1.2)
   kramdown-parser-gfm (~> 1.1)
+  logger
   minima (~> 2.5)
   tzinfo-data
 
