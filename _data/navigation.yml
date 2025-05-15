@@ -1,0 +1,16 @@
+main:
+  - title: "الرئيسية"
+    url: /
+  - title: "الذكاء الاصطناعي"
+    url: /ai/
+  - title: "التعليم الإلكتروني"
+    url: /elearning/
+  - title: "إدارة الأعمال"
+    url: /business/
+  - title: "إنسانيات"
+    url: /humanities/
+  - title: "تدوينات متفرقة"
+    url: /misc/
+  - title: "عني"
+    url: /aboutme/
+
