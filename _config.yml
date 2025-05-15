@@ -17,68 +17,159 @@ title: مدونتي الرقمية
 email: your-email@example.com
 description: >-
   مدونة شخصية تهتم بمواضيع الذكاء الاصطناعي، التعليم الإلكتروني، إدارة الأعمال، الإنسانيات، ومواضيع متنوعة أخرى.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog. Important: leave empty for Netlify deployment.
+url: "" # the base hostname & protocol for your site, e.g. http://example.com. Will be set by Netlify.
 
 # Build settings
-theme: minima
+# theme: minima # Replaced with Minimal Mistakes
+remote_theme: "mmistakes/minimal-mistakes@4.24.0" # Using a specific version for stability
+minimal_mistakes_skin: "default" # Optional: "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
-# minima theme settings
-show_excerpts: true # set to true to show excerpts on the homepage
+# Locale settings
+locale: "ar-SA" # For Arabic language support in the theme
 
-# Minima date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-minima:
-  date_format: "%Y-%m-%d"
+# Site Author
+author:
+  name: "عبدالله اللحام"
+  avatar: "/assets/images/profile.png" # Placeholder, user should replace
+  bio: "مهتم بالتقنية وتطبيقاتها في مجالات الحياة المختلفة"
+  location: "المملكة العربية السعودية"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/abdullah-lajam"
+    # Add other social links as needed
 
-# If you want to link only specific pages in your header, uncomment
-# this and add the path to the pages in order as they should show up
-header_pages:
-  - aboutme.md
-  # Add other main pages if needed, like a contact page
-
-# Collections for blog sections
+# Collections for blog sections (already defined, ensuring they are compatible)
 collections:
   ai:
     output: true
     permalink: /:collection/:name
+    label: "الذكاء الاصطناعي"
   elearning:
     output: true
     permalink: /:collection/:name
+    label: "التعليم الإلكتروني"
   business:
     output: true
     permalink: /:collection/:name
+    label: "إدارة الأعمال"
   humanities:
     output: true
     permalink: /:collection/:name
+    label: "إنسانيات"
   misc:
     output: true
     permalink: /:collection/:name
+    label: "تدوينات متفرقة"
 
-# social links
-twitter_username: your_twitter_username # استبدل باسم مستخدم تويتر الخاص بك
-github_username:  your_github_username # استبدل باسم مستخدم جيت هاب الخاص بك
-rss: rss
-# dribbble_username: jekyll
-# facebook_username: jekyll
-# flickr_username: jekyll
-# instagram_username: jekyll
-# linkedin_username: jekyll
-# pinterest_username: jekyll
-# youtube_username: jekyll
-# googleplus_username: +jekyll
+# Navigation links
+main:
+  - title: "الرئيسية"
+    url: /
+  - title: "الذكاء الاصطناعي"
+    url: /ai/
+  - title: "التعليم الإلكتروني"
+    url: /elearning/
+  - title: "إدارة الأعمال"
+    url: /business/
+  - title: "إنسانيات"
+    url: /humanities/
+  - title: "تدوينات متفرقة"
+    url: /misc/
+  - title: "عني"
+    url: /aboutme/
 
-# Mastodon instances
-# mastodon:
-# - username: jekyll
-#   instance: example.com
-# - username: jekyll2
-#   instance: example.com
+# Defaults for posts and pages (can be customized per collection too)
+defaults:
+  # _posts
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true # if you want to enable comments later
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: "pages"
+    values:
+      layout: single
+      author_profile: true
+  # Collections - Example for 'ai' collection, can be replicated for others
+  - scope:
+      path: ""
+      type: "ai"
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      sidebar:
+        nav: "ai_sidenav" # Example for a collection-specific sidebar navigation
+  - scope:
+      path: ""
+      type: "elearning"
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      related: true
+  - scope:
+      path: ""
+      type: "business"
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      related: true
+  - scope:
+      path: ""
+      type: "humanities"
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      related: true
+  - scope:
+      path: ""
+      type: "misc"
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      related: true
 
+# Footer links
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/abdullah-lajam"
+    # Add other footer links
+
+# Atom feed
+feed:
+  path: atom.xml
+
+# Plugins (already in Gemfile, ensuring they are listed if needed by theme)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-include-cache
 
 # Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -88,4 +179,12 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - README.md
+  - netlify.toml # if you add one later
+  - .jekyll-cache/
+
+# Kramdown Configuration
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
 

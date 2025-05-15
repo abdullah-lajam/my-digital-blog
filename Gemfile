@@ -10,12 +10,13 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll", "~> 3.8"
 
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
-
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
-gem "minima", "~> 2.5"
+
+# Theme gem
+gem "minimal-mistakes-jekyll"
+
 gem "concurrent-ruby", "~> 1.1.1"
 
 # Add missing dependencies for Netlify build
@@ -28,6 +29,7 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.11"
   gem "jekyll-seo-tag", "~> 2.5"
   gem "jekyll-sitemap", "~> 1.2"
+  gem "jekyll-include-cache", "~> 0.2.1" # Recommended for Minimal Mistakes
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -35,7 +37,6 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
-
 
 gem "kramdown-parser-gfm", "~> 1.1"
 
