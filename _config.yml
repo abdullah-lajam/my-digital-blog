@@ -63,22 +63,22 @@ collections:
     permalink: /:collection/:name
     label: "تدوينات متفرقة"
 
-# Navigation links
-main:
-  - title: "الرئيسية"
-    url: /
-  - title: "الذكاء الاصطناعي"
-    url: /ai/
-  - title: "التعليم الإلكتروني"
-    url: /elearning/
-  - title: "إدارة الأعمال"
-    url: /business/
-  - title: "إنسانيات"
-    url: /humanities/
-  - title: "تدوينات متفرقة"
-    url: /misc/
-  - title: "عني"
-    url: /aboutme/
+# Navigation links are now in _data/navigation.yml
+# main:
+#   - title: "الرئيسية"
+#     url: /
+#   - title: "الذكاء الاصطناعي"
+#     url: /ai/
+#   - title: "التعليم الإلكتروني"
+#     url: /elearning/
+#   - title: "إدارة الأعمال"
+#     url: /business/
+#   - title: "إنسانيات"
+#     url: /humanities/
+#   - title: "تدوينات متفرقة"
+#     url: /misc/
+#   - title: "عني"
+#     url: /aboutme/
 
 # Defaults for posts and pages (can be customized per collection too)
 defaults:
